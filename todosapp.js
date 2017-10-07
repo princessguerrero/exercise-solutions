@@ -42,6 +42,10 @@ function completeTask(index) {
     return tasks[index].completed = true
 }
 
+function toggleCompleted(index) {
+  taskArr[index].completed = !taskArr[index].completed
+}
+
 var tasks = []
     
 
@@ -63,7 +67,7 @@ rl.on('line', function(input) {
             if (tasks[index] === undefined){
               console.log('an element at that index does not exist')
             } else {
-              completeTask(index)
+              toggleCompeted(index)
             }
         } 
      
